@@ -1,12 +1,5 @@
 <div class="container">
 
-  <% @dolls.each do |doll| %>
-    <%= link_to doll_path(doll.id) do %>
-      <div class="doll-card">
-        <%= cl_image_tag doll.photos.key, height: 300, width: 400, crop: :scale %>
 
-      </div>
-    <% end %>
-  <% end %>
 
 </div>
