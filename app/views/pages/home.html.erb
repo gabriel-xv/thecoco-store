@@ -1,5 +1,17 @@
 <div class="container">
 
+  <div class="home-btns">
+    <div class="browse-dolls">
+      <%= link_to "Meet my friends", dolls_path %>
 
+    </div>
+
+    <% if !user_signed_in? %>
+      <div class="fan-club-btn">
+        <%= link_to "Join the coco fanclub", new_user_session_path %>
+      </div>
+    <% end %>
+
+  </div>
 
 </div>
