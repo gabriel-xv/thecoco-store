@@ -3,8 +3,10 @@ body {
   background-size: 100%;
 }
 
-.banner-home {
-  display: flex;
+@media(max-width: 770px) {
+  .banner-home img {
+    width: 50%;
+  }
 }
 
 .home-btns {
