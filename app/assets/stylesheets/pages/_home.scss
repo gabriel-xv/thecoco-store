@@ -2,3 +2,15 @@ body {
   background-image: url('https://res.cloudinary.com/drd5lqxx9/image/upload/v1607353321/krystal-ng-PrQqQVPzmlw-unsplash_d8bex0.jpg');
   background-size: 100%;
 }
+
+.banner-home {
+  display: flex;
+}
+
+.home-btns {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  text-decoration: none;
+  width: 70%;
+}

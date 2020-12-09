@@ -1,17 +1,21 @@
 <div class="container">
 
-  <div class="home-btns">
-    <div class="browse-dolls">
-      <%= link_to "Meet my friends", dolls_path %>
+  <div class="banner-home">
+    <%= image_tag "https://res.cloudinary.com/drd5lqxx9/image/upload/v1607427205/Captura_de_pantalla_2020-12-08_a_las_12.29.48-removebg-preview_mvidpo.png" %>
+
+    <div class="home-btns">
+      <div class="browse-dolls">
+        <%= link_to "Meet my friends", dolls_path %>
+
+      </div>
+
+      <% if !user_signed_in? %>
+        <div class="fan-club-btn">
+          <%= link_to "Join the coco fanclub", new_user_session_path %>
+        </div>
+      <% end %>
 
     </div>
-
-    <% if !user_signed_in? %>
-      <div class="fan-club-btn">
-        <%= link_to "Join the coco fanclub", new_user_session_path %>
-      </div>
-    <% end %>
-
   </div>
 
 </div>
