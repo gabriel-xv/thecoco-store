@@ -1,0 +1,42 @@
+.banner-show {
+  border-radius: 20px;
+  width: 100%;
+}
+
+.review-wall {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.messag-btn {
+  background-color: #e2afff;
+  border-radius: 20px;
+  padding: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+.review-cont-input {
+  border-radius: 20px;
+}
+
+.review-box {
+  .date-string {
+    font-weight: lighter;
+    font-size: 12px;
+  }
+}
+
+.review-card {
+  background-color: #fcf7fb;
+  border-radius: 20px;
+  opacity: 0.5;
+  margin-bottom: 16px;
+}
+
+.review-info p {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}

@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="doll-card">
+    <%= cl_image_tag @doll.photo.key, class:'banner-show'  %>
+    <div class="doll-show-inf m-4 pb-4">
+      <h4><%= @doll.name %></h4>
+      <p><%= @doll.description %></p>
+    </div>
+  </div>
+
+
+  <div class="review-wall">
+
+    <div class="review-box">
+      <% if !@doll.reviews.blank? %>
+        <% @reviews.each do |review| %>
+          <div class="review-card">
+            <div class="review-info">
+              <p><%= review.content %></p>
+              <p class="date-string"><%= review.created_at.strftime("%-d %b %Y, %H:%M") %></p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <h4>Leave a message! 🐱</h4>
+
+    <%= simple_form_for([ @doll, @review ], remote: true) do |f| %>
+      <%= f.input :content, as: :text, placeholder: 'Type a message', label: false, input_html: { class: "review-cont-input"} %>
+      <div class="secondarybtn-category-ex">
+        <%= f.button :submit, 'Post message', class: "category-color-button messag-btn" %>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>

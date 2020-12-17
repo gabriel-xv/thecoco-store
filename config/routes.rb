@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :dolls do
     resources :adoptions
+    resources :reviews
   end
 end
