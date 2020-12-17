@@ -3,16 +3,27 @@ body {
   background-size: 100%;
 }
 
-@media(max-width: 770px) {
-  .banner-home img {
-    width: 50%;
+.coco-image-home {
+  img {
+    max-width: 80%;
+    height: auto;
+    object-fit: cover;
+    justify-content: flex-end;
   }
 }
 
-.home-btns {
+
+.banner-home {
   backdrop-filter: blur(8px);
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  text-decoration: none;
-  width: 70%;
+  justify-content: space-between;
+}
+
+.browse-dolls {
+  background-color: #e2afff;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  padding: 8px;
 }
