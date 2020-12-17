@@ -1,4 +1,5 @@
 <div class="review-card">
+  <div class="small-avatar" style="background-image: url(<%= review.user.photo_url %>)"></div>
   <div class="review-info">
     <p><%= review.content %></p>
     <p class="date-string"><%= review.created_at.strftime("%-d %b %Y, %H:%M") %></p>
