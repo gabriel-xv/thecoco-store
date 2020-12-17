@@ -7,6 +7,8 @@ class DollsController < ApplicationController
 
   def show
     @doll = Doll.find(params[:id])
+    @review = Review.new
+    @reviews = Review.where(doll_id: @doll)
   end
 
   def new

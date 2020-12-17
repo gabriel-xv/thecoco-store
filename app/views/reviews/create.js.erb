@@ -1,0 +1,7 @@
+console.log("<%= escape_javascript (render partial: 'review', review: @review) %>")
+
+const reviewBox = document.querySelector(".review-box");
+const reviewInput = document.querySelector(".review-cont-input")
+
+reviewBox.insertAdjacentHTML("beforeend", "<%= escape_javascript (render partial: 'review', review: @review) %>");
+reviewInput.value = "";
