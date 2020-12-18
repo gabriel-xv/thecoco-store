@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_18_100213) do
+ActiveRecord::Schema.define(version: 2020_12_18_202234) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,12 @@ ActiveRecord::Schema.define(version: 2020_12_18_100213) do
     t.index ["user_id"], name: "index_adoptions_on_user_id"
   end
 
+  create_table "chatrooms", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "dolls", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -55,6 +61,16 @@ ActiveRecord::Schema.define(version: 2020_12_18_100213) do
     t.integer "price_cents", default: 0, null: false
     t.string "sku"
     t.index ["user_id"], name: "index_dolls_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.string "content"
+    t.bigint "chatroom_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["chatroom_id"], name: "index_messages_on_chatroom_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -104,6 +120,8 @@ ActiveRecord::Schema.define(version: 2020_12_18_100213) do
   add_foreign_key "adoptions", "dolls"
   add_foreign_key "adoptions", "users"
   add_foreign_key "dolls", "users"
+  add_foreign_key "messages", "chatrooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "orders", "dolls"
   add_foreign_key "orders", "users"
   add_foreign_key "reviews", "dolls"
