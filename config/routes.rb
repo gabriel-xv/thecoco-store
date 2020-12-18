@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'pages#home'
   resources :dolls do
-    resources :adoptions
     resources :reviews
+  end
+  resources :orders, only: [:show, :create] do
+    resources :payments, only: :new
   end
 end

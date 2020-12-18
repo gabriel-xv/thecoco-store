@@ -16,6 +16,7 @@ doll_1 = Doll.new(
   description: 'I am not an impostor',
   price_cents: 36,
   adopted: false,
+  sku: 'evil-brigitta',
   user_id: user_1.id
   )
 file = URI.open('https://res.cloudinary.com/drd5lqxx9/image/upload/v1605805915/7sb09dfrcfid337wob8w249zot4c.png')
