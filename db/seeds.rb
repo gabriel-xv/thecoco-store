@@ -1,8 +1,8 @@
 require "open-uri"
 
 puts "Destroying the data"
-Doll.destroy_all
-User.destroy_all
+Doll.destroy_all if Rails.env.development?
+User.destroy_all if Rails.env.development?
 puts "Creating new ones"
 
 user_1 = User.create!(
@@ -16,6 +16,7 @@ doll_1 = Doll.new(
   description: 'I am not an impostor',
   price_cents: 36,
   adopted: false,
+  sku: 'evil-brigitta',
   user_id: user_1.id
   )
 file = URI.open('https://res.cloudinary.com/drd5lqxx9/image/upload/v1605805915/7sb09dfrcfid337wob8w249zot4c.png')
