@@ -25,12 +25,15 @@
     </div>
 
     <h4>Leave a message! 🐱</h4>
-
-    <%= simple_form_for([ @doll, @review ], remote: true) do |f| %>
-      <%= f.input :content, as: :text, placeholder: 'Type a message', label: false, input_html: { class: "review-cont-input"} %>
-      <div class="secondarybtn-category-ex">
-        <%= f.button :submit, 'Post message', class: "category-color-button messag-btn" %>
-      </div>
+    <% if user_signed_in? %>
+      <%= simple_form_for([ @doll, @review ], remote: true) do |f| %>
+        <%= f.input :content, as: :text, placeholder: 'Type a message', label: false, input_html: { class: "review-cont-input"} %>
+        <div class="secondarybtn-category-ex">
+          <%= f.button :submit, 'Post message', class: "category-color-button messag-btn" %>
+        </div>
+      <% end %>
+    <% else %>
+      <p>You need to login before leaving a message. 🍑</p>
     <% end %>
 
   </div>
