@@ -2,14 +2,15 @@
   <div class="doll-card">
     <%= cl_image_tag @doll.photo.key, class:'banner-show'  %>
     <div class="doll-show-inf m-4 pb-4">
+      <%= form_tag orders_path do %>
+        <%= hidden_field_tag 'doll_id', @doll.id %>
+        <%= submit_tag 'Adopt me!', class: 'btn messag-btn adoption-btn' %>
+      <% end %>
       <h4><%= @doll.name %></h4>
       <p><%= @doll.description %></p>
       <p>Amount: <%= humanized_money_with_symbol(@doll.price) %></p>
     </div>
-    <%= form_tag orders_path do %>
-      <%= hidden_field_tag 'doll_id', @doll.id %>
-      <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
-    <% end %>
+
   </div>
 
 
@@ -28,7 +29,6 @@
         <% end %>
       <% end %>
     </div>
-
     <h4>Leave a message! 🐱</h4>
     <% if user_signed_in? %>
       <%= simple_form_for([ @doll, @review ], remote: true) do |f| %>
