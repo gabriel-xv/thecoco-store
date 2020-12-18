@@ -14,7 +14,7 @@ user_1 = User.create!(
 doll_1 = Doll.new(
   name: 'Brigitta Cute',
   description: 'I am not an impostor',
-  price: 36,
+  price_cents: 36,
   adopted: false,
   user_id: user_1.id
   )
