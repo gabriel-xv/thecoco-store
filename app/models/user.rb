@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
   has_many :dolls, dependent: :destroy
-  has_many :orders
+  has_many :orders, dependent: :destroy
   has_one_attached :avatar
 
   def self.find_for_facebook_oauth(auth)
