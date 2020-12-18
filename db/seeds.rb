@@ -1,7 +1,7 @@
 require "open-uri"
 
 puts "Destroying the data"
-Doll.destroy_all
+Doll.destroy_all if Rails.env.development?
 User.destroy_all
 puts "Creating new ones"
 
