@@ -6,28 +6,22 @@
       <div class="browse-dolls">
         <%= link_to "Meet my friends", dolls_path %>
       </div>
-
-      <% if !user_signed_in? %>
-        <div class="fan-club-btn">
-          <%= link_to "Join the fanclub", new_user_session_path %>
-        </div>
-      <% end %>
     </div>
   </div>
 
   <div class="forum-coco">
     <h4>The Coco forum</h4>
-    <p>Join the community and make new friends. You can choose one of our channels.</p>
-    <ul>
-      <li class="colored-li">General</li>
-      <li>Blythe customization</li>
-      <li class="colored-li">Requests</li>
-      <li>Off-topic</li>
-    </ul>
+    <p>Join the community and make new friends. You can choose one of our channels to start chatting. 💃</p>
+      <div class="forum-c colored-li"><a>#General</a></div>
+      <div class="forum-c"><a>#Blythe customization</a></div>
+      <div class="forum-c colored-li"><a>#Requests</a></div>
+      <div class="forum-c"><a>#Fashion</a></div>
+      <div class="forum-c colored-li mb-2"><a>#Off-topic</a></div>
   </div>
 
   <div class="follow-ig">
-    <h4> <a href="https://www.instagram.com/la_cocco_violette/" target="_blank">Follow me on Instagram 📸</a></h4>
+    <h4> <a href="https://www.instagram.com/la_cocco_violette/" target="_blank">Follow me on Instagram</a></h4>
   </div>
 
 </div>
+
