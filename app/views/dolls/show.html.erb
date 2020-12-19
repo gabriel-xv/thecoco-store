@@ -12,7 +12,9 @@
       <% end %>
       <h4><%= @doll.name %></h4>
       <p><%= @doll.description %></p>
-      <p>Amount: <%= humanized_money_with_symbol(@doll.price) %></p>
+      <% if !@doll.adopted? %>
+        <p>Amount: <%= humanized_money_with_symbol(@doll.price) %></p>
+      <% end %>
     </div>
 
   </div>
