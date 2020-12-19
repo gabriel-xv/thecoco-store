@@ -5,7 +5,6 @@
     <div class="home-btns">
       <div class="browse-dolls">
         <%= link_to "Meet my friends", dolls_path %>
-
       </div>
 
       <% if !user_signed_in? %>
@@ -14,8 +13,17 @@
         </div>
       <% end %>
     </div>
+  </div>
 
-
+  <div class="forum-coco">
+    <h4>The Coco forum</h4>
+    <p>Join the community and make new friends. You can choose one of our channels.</p>
+    <ul>
+      <li class="colored-li">General</li>
+      <li>Blythe customization</li>
+      <li class="colored-li">Requests</li>
+      <li>Off-topic</li>
+    </ul>
   </div>
 
 </div>

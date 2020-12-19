@@ -1,7 +1,7 @@
-<div class="message-container" id="message-<%= message.id %>">
-  <i class="author">
-    <span><%= message.user.first_name %></span>
-    <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
-  </i>
-  <p><%= message.content %></p>
+<div class="review-card d-flex">
+  <div class="small-avatar" style="background-image: url(<%= message.user.photo_url %>)"></div>
+  <div class="review-info">
+    <p><%= message.user.first_name %>: <%= message.content %></p>
+    <p class="date-string"><%= message.created_at.strftime("%-d %b %Y, %H:%M") %></p>
+  </div>
 </div>
