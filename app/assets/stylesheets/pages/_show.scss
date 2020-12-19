@@ -16,6 +16,9 @@
   padding: 12px;
   color: white;
   font-weight: bold;
+  -webkit-box-shadow: -5px 6px 5px 0px rgba(52, 50, 50, 0.15);
+  -moz-box-shadow: -5px 6px 5px 0px rgba(52, 50, 50, 0.15);
+  box-shadow: -5px 6px 5px 0px rgba(52, 50, 50, 0.15);
 }
 
 .review-cont-input {
