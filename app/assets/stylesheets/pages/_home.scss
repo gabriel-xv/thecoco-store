@@ -18,26 +18,20 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 20px;
   height: 40vh;
-  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url('https://res.cloudinary.com/drd5lqxx9/image/upload/v1608208415/Captura_de_pantalla_2020-12-17_a_las_13.33.23_e795cb.png');
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url('https://res.cloudinary.com/drd5lqxx9/image/upload/v1608390827/Captura_de_pantalla_2020-12-19_a_las_16.13.37_gcerel.png');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
 
 .browse-dolls {
-  position: absolute;
-  margin-top: 60px;
-  left: 16px;
-  overflow: auto;
-  background-color: #e2afff;
-  border-radius: 20px;
   color: white;
-  font-weight: bold;
-  padding: 12px;
-  justify-content: flex-end;
-  -webkit-box-shadow: -5px 6px 5px 0px rgba(52, 50, 50, 0.15);
-  -moz-box-shadow:    -5px 6px 5px 0px rgba(52, 50, 50, 0.15);
-  box-shadow:         -5px 6px 5px 0px rgba(52, 50, 50, 0.15);
+  font-size: 65px;
+  font-weight: bolder;
+  a {
+    padding: 16px;
+    opacity: 0.5;
+  }
 }
 
 .fan-club-btn {
@@ -66,4 +60,24 @@ body {
   background-color: #fcf7fb;
   border-radius: 20px;
   opacity: 0.5;
+}
+
+.forum-c {
+  width: 100%;
+}
+
+.follow-ig {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-radius: 20px;
+  height: 40vh;
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0)), url('https://res.cloudinary.com/drd5lqxx9/image/upload/v1608296695/swvk6k1qfhalkf3ez5ygb1wv7yip.png');
+  background-size: cover;
+  color: white;
+  font-weight: bolder;
+  h4 {
+    padding: 16px;
+    font-size: 60px;
+    opacity: 0.5;
+  }
 }
