@@ -7,10 +7,14 @@
     border-radius: 20px;
   }
   .form-actions {
-    background-color: #e2afff;
+    background: #ef32d9;
+    background: -webkit-linear-gradient(to left, #ef32d9, #89fffd);
+    background: linear-gradient(to left, #ef32d9, #89fffd);
     border-radius: 20px;
-    color: white;
-    font-weight: bolder;
     width: 25vw;
+    .btn {
+      color: white !important;
+      font-weight: bolder !important;
+    }
   }
 }
