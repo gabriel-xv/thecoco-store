@@ -38,9 +38,13 @@
     <h4>Leave a message! 🐱</h4>
     <% if user_signed_in? %>
       <%= simple_form_for([ @doll, @review ], remote: true) do |f| %>
-        <%= f.input :content, as: :text, placeholder: 'Type a message', label: false, input_html: { class: "review-cont-input"} %>
-        <div class="secondarybtn-category-ex">
-          <%= f.button :submit, 'Post message', class: "category-color-button messag-btn" %>
+        <div class="d-flex flex-g">
+          <div class="text-m">
+            <%= f.input :content, as: :text, placeholder: 'Type a message', label: false, input_html: { class: "review-cont-input"} %>
+          </div>
+          <div class="secondarybtn-category-ex ml-2">
+            <%= f.button :submit, 'Send', class: "category-color-button messag-btn" %>
+          </div>
         </div>
       <% end %>
     <% else %>
