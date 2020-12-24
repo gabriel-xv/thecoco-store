@@ -1,15 +1,18 @@
-.navbar-lewagon {
+.navbar-coco {
   justify-content: space-between;
   backdrop-filter: blur(8px);
   background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 9px 10px 22px -8px rgba(92,0,92,0.39);
+  -moz-box-shadow: 9px 10px 22px -8px rgba(92,0,92,0.39);
+  box-shadow: 9px 10px 22px -8px rgba(92,0,92,0.39);
   margin: 16px;
   border-radius: 20px;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-coco .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-coco .navbar-brand img {
   width: 40px;
 }

@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-coco">
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "https://res.cloudinary.com/drd5lqxx9/image/upload/v1607129806/d570253c-49bb-44cb-95fb-374c3710562b_200x200_iryo2v.png" %>
     <% end %>
@@ -22,9 +22,13 @@
         </li>
       <% else %>
         <li class="nav-item">
+          <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
         </li>
       <% end %>
     </ul>
   </div>
+
 </div>
