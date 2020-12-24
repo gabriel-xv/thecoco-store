@@ -6,8 +6,11 @@
 .review-wall {
   backdrop-filter: blur(8px);
   background-color: rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 9px 10px 22px 0px rgba(92,0,92,0.39);
+  -moz-box-shadow: 9px 10px 22px 0px rgba(92,0,92,0.39);
+  box-shadow: 9px 10px 22px 0px rgba(92,0,92,0.39);
   border-radius: 20px;
-  padding: 16px;
+  padding: 20px;
 }
 
 .messag-btn {
@@ -37,6 +40,9 @@
   border-radius: 20px;
   opacity: 0.5;
   margin-bottom: 16px;
+  -webkit-box-shadow: 9px 10px 22px 0px rgba(92,0,92,0.39);
+  -moz-box-shadow: 9px 10px 22px 0px rgba(92,0,92,0.39);
+  box-shadow: 9px 10px 22px 0px rgba(92,0,92,0.39);
   .small-avatar {
     margin: 4px;
   }
@@ -49,6 +55,6 @@
 
 .adoption-btn {
   position: absolute;
-  bottom: 92px;
+  bottom: 130px;
   right: 32px;
 }

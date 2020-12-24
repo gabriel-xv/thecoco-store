@@ -20,11 +20,11 @@
   </div>
 
 
-  <div class="review-wall mb-3">
+  <div class="review-wall mb-4 mt-5">
 
     <div class="review-box">
       <% if !@doll.reviews.blank? %>
-        <% @reviews.each do |review| %>
+        <% @reviews.last(5).each do |review| %>
           <div class="review-card d-flex">
             <div class="small-avatar" style="background-image: url(<%= review.user.photo_url %>)"></div>
             <div class="review-info">

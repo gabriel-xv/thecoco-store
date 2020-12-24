@@ -12,6 +12,11 @@ body {
   }
 }
 
+.home-card {
+  -webkit-box-shadow: 9px 10px 22px 0px rgba(92,0,92,0.39);
+  -moz-box-shadow: 9px 10px 22px 0px rgba(92,0,92,0.39);
+  box-shadow: 9px 10px 22px 0px rgba(92,0,92,0.39);
+}
 
 .banner-home {
   backdrop-filter: blur(8px);
