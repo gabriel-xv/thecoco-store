@@ -1,1 +1,1 @@
-The Coco Violette social network.
+The Cocco Violette social network.
